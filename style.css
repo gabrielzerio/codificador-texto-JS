@@ -1,109 +1,169 @@
 :root {
-    --background: #E5E5E5;
+    --background: #F3F5FC;
+    --dark-blue-400: #072b61;
+    --dark-blue-300: #0a3871;
+    --gray: #D8DFE8;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
 }
 
 body {
     background-color: var(--background);
-    height: 100vh;
+    width: 100%;
+    height: 900px; /* ARRUMAR AQUI DEPOIS */
 }
 
 header img {
-    margin-top: 20px;
+    margin-top: 2%;
+    margin-left: 5%;
     position: absolute;
 }
 
-/*****  COMEÇO DA AREA DO INPUT ***/
 
 main {
-    height: 90%;
+    /*O MEU MAIN ESTÁ SERVINDO PARA CENTRALIZAR O CONTAINER */
     display: flex;
-    gap: 40px;
-    margin-left: 15%;
-    margin-right: 5%;
-}
-
-
-.section-input {
-    
-    flex: 2;
-    margin-top: 5em;
-    border-radius: 10px;
-    padding: 4px;
-}
-
-.input {
-    display: flex;
+    justify-content: center;
     height: 100%;
-    flex-direction: column;
-    justify-content: space-between;
+    /*importante esse height ficar aqui !!!!!! */
+    /* OBSERVAR SE ESSE TAMANHO NÃO VAI DAR PROBLEMA DEPOIS NO MOBILE */
 }
 
-.section-input .textarea {
-    background-color: var(--background);
-    width: 100%;
-    height: 70%;
-    outline: 0;
-    border: none;
-    resize: none;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 150%;
-    color: #0A3871;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.btnsEncDec {
+.container {
+    width: 1400px;
     display: flex;
-    gap: 30px;
+    gap: 20px;
+    height: 95%;
 }
 
-.btnsEncDec button {
-    flex: 1;
-    background: #0A3871;
-    border-radius: 24px;
-    color: white;
-    padding: 20px;
+/*****  COMEÇO DA AREA DO INPUT ***/
+/* */
+
+
+.inputSection {
+    display: flex;
+    flex-direction: column;
+    /* DIREÇÃO DO INPUT-SECT É COLUNA POIS OS BOTÕES FICAM ABAIXO DO INPUT */
+    height: 83%;
+    /* o tamanho do campo de input é menor que o do campo de output (de acordo com o layout fornecido) */
+    flex: 1.5;
+    justify-content: space-between;
+    margin-top: 100px;
+
 }
 
-.belowOutput {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
+.inputTexto {
+    /* É O INPUT DO TEXTO PARA CODIFICAR OU DECODIFICAR!! */
+    max-width: 90%;
+    height: 50%;
+    font-size: 32px;
+    background-color: var(--background);
+    resize: none;
+    border: none;
+    outline: none;
+}
+
+.inputSection .labelEBotoes p {
     font-size: 12px;
-    line-height: 150%;
-    color: #343A40;
+    color: #495057;
 }
-.belowOutput p:before{
+
+.labelEBotoes {
+    /* ESSA CLASSE É A CLASSE QUE ENGLOBA O PARAGRAFO AVISANDO LETRA MINUSCULAS E OS BOTOES, até agora não precisa usar ela...*/
 
 }
+
+.botoes {
+    /*CLASSE DOS BOTOES PRECISA SETAR FLEX PQ É A CLASSE PAI DOS DOIS BOTOES */
+    display: flex;
+    width: 95%;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.botoes button {
+    flex: 1;
+    border: none;
+    padding: 30px 15px 30px 15px;
+    background-color: var(--dark-blue-400);
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 25px;
+    border: 1px solid var(--dark-blue-400);
+}
+
+.botoes button:nth-child(2) {
+    background-color: var(--gray);
+    color: var(--dark-blue-300)
+}
+
+
 /*****  FIM DA AREA DO INPUT ***/
 
-.section-output {
-    width: 100%;
-    margin-top: 30px;
-    flex: 1;
-    padding: 10px;
-    background-color: #FFFFFF;
-    border-radius: 10px;
+/*****  COMEÇO DA AREA DO OUTPUT ***/
+
+.outputSection {
+    flex: 1.1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+    height: 95%;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+
+    border-radius: 32px;
+}
+
+.outputSection img {
+    width: 200px;
+    height: auto;
 }
 
 
-@media(max-width: 800px) {
+/*****  FIM DA AREA DO OUTPUT ***/
+
+footer {
+    background-color: lightblue;
+    bottom: 0;
+}
+
+@media screen and (max-width:768px) {
+
     main {
-        flex-direction: column;
-        margin: 10px;
+        /* a partir de 768px tera um padding no main pros objetos não ficarem colados na tela! */
+        padding: 10px;
+        /* talvez esse padding possa estar no .container aqui em baixo? */
+        height: 100%;
     }
 
-    .btnsEncDec {
+    .container {
+        display: flex;
         flex-direction: column;
-        gap: 10px;
+        width: 100%;
+    }
+
+    section {
+        flex: 1;
+    }
+
+    .outputSection img {
+        display: none;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .inputSection .labelEBotoes .botoes {
+        flex-direction: column;
+        gap: 20px;
     }
 }
