@@ -16,7 +16,10 @@
 body {
     background-color: var(--background);
     width: 100%;
-    height: 900px; /* ARRUMAR AQUI DEPOIS */
+    height: 100vh;
+    /* ARRUMAR AQUI DEPOIS */
+    display: flex;
+    flex-direction: column;
 }
 
 header img {
@@ -26,20 +29,13 @@ header img {
 }
 
 
-main {
-    /*O MEU MAIN ESTÁ SERVINDO PARA CENTRALIZAR O CONTAINER */
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    /*importante esse height ficar aqui !!!!!! */
-    /* OBSERVAR SE ESSE TAMANHO NÃO VAI DAR PROBLEMA DEPOIS NO MOBILE */
-}
-
 .container {
-    width: 1400px;
+    margin: 0 0 0 6%;
+    width: 80%;
+    flex: 1;
     display: flex;
     gap: 20px;
-    height: 95%;
+
 }
 
 /*****  COMEÇO DA AREA DO INPUT ***/
@@ -51,6 +47,7 @@ main {
     flex-direction: column;
     /* DIREÇÃO DO INPUT-SECT É COLUNA POIS OS BOTÕES FICAM ABAIXO DO INPUT */
     height: 83%;
+    min-height: 500px;
     /* o tamanho do campo de input é menor que o do campo de output (de acordo com o layout fornecido) */
     flex: 1.5;
     justify-content: space-between;
@@ -117,11 +114,12 @@ main {
     flex-direction: column;
     margin-top: 40px;
     height: 95%;
+    min-height: 300px;
     padding: 20px;
     background-color: white;
     text-align: center;
-
     border-radius: 32px;
+
 }
 
 .outputSection img {
@@ -150,11 +148,9 @@ footer {
         display: flex;
         flex-direction: column;
         width: 100%;
+        margin: 0;
     }
 
-    section {
-        flex: 1;
-    }
 
     .outputSection img {
         display: none;
