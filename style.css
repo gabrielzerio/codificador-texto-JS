@@ -30,10 +30,11 @@ header img {
 
 
 .container {
-    align-self: center;
     flex: 1;
     display: flex;
-    gap: 20px; 
+    gap: 20px;
+    width: 90%;
+
 }
 
 /*****  COMEÇO DA AREA DO INPUT ***/
@@ -45,17 +46,17 @@ header img {
     flex-direction: column;
     /* DIREÇÃO DO INPUT-SECT É COLUNA POIS OS BOTÕES FICAM ABAIXO DO INPUT */
     height: 83%;
-    min-height:500px;
+    min-height: 500px;
     /* o tamanho do campo de input é menor que o do campo de output (de acordo com o layout fornecido) */
-    max-width: 700px;
-    min-width: 600px;
+    flex: 1.4;
     justify-content: space-between;
+    margin-left: 10%;
     margin-top: 100px;
 }
 
 .inputTexto {
     /* É O INPUT DO TEXTO PARA CODIFICAR OU DECODIFICAR!! */
-    height: 50%;
+    height: 70%;
     font-size: 32px;
     background-color: var(--background);
     resize: none;
@@ -104,14 +105,14 @@ header img {
 /*****  COMEÇO DA AREA DO OUTPUT ***/
 
 .outputSection {
-    
     display: flex;
+    flex: 1;
     align-items: center;
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    margin-top: 40px;
-    height: 95%;
+    margin-top: 20px;
+    height: 100%;
     min-height: 300px;
     padding: 20px;
     background-color: white;
@@ -120,10 +121,30 @@ header img {
 }
 
 .outputSection img {
-    width: 100%;
+    width: 70%;
     height: auto;
 }
 
+.output-btncopiar {
+    width: 100%;
+}
+
+.output-btncopiar button {
+    width: 50%;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    visibility:hidden;
+}
+
+.output {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    background-color: white;
+    resize: none;
+    border: none;
+    outline: none;
+}
 
 /*****  FIM DA AREA DO OUTPUT ***/
 
@@ -145,9 +166,11 @@ footer {
         display: flex;
         flex-direction: column;
         width: 100%;
-        margin: 0;
     }
 
+    .inputSection {
+        margin-left: 0;
+    }
 
     .outputSection img {
         display: none;

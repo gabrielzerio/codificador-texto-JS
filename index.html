@@ -14,10 +14,10 @@
     <header>
         <img src="imgs/logop.png" alt="Logo Alura">
     </header>
- 
+
     <div class="container">
         <section class="inputSection">
-            <textarea name="" class="inputTexto" cols="" rows="" placeholder="Digite seu texto"></textarea>
+            <textarea class="inputTexto" placeholder="Digite seu texto"></textarea>
             <div class="labelEBotoes">
                 <p>Apenas letras minúsculas e sem acento.</p>
                 <div class="botoes">
@@ -27,15 +27,19 @@
             </div>
         </section>
         <section class="outputSection">
-            <img src="imgs/img-pessoaProcurando.svg" alt="pessoaProcurando">
-            <h2>Nenhuma mensagem encontrada</h2>
-            <p>Digite um texto que você deseja criptografar ou descriptografar</p>
+            <div class="mostraStatusCodigo">
+                <img src="imgs/img-pessoaProcurando.svg" alt="pessoaProcurando">
+                <h2>Nenhuma mensagem encontrada</h2>
+            </div>
+            <div class="output-btncopiar">
+                <textarea class="output" placeholder="Digite um texto que você deseja criptografar ou descriptografar"disabled></textarea>
+                <button class="copiar">Copiar</button>
+            </div>
         </section>
     </div>
 
-
-    <!-- fooooooooooooooooter chato em-->
     <footer>Copyright Gabriel Zério Lopes</footer>
+    <script src="script.js"></script>
 
 </body>
 
