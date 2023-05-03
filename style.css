@@ -16,8 +16,8 @@
 body {
     background-color: var(--background);
     width: 100%;
+    gap: 50px;
     height: 100vh;
-    /* ARRUMAR AQUI DEPOIS */
     display: flex;
     flex-direction: column;
 }
@@ -30,12 +30,10 @@ header img {
 
 
 .container {
-    margin: 0 0 0 6%;
-    width: 80%;
+    align-self: center;
     flex: 1;
     display: flex;
-    gap: 20px;
-
+    gap: 20px; 
 }
 
 /*****  COMEÇO DA AREA DO INPUT ***/
@@ -47,17 +45,16 @@ header img {
     flex-direction: column;
     /* DIREÇÃO DO INPUT-SECT É COLUNA POIS OS BOTÕES FICAM ABAIXO DO INPUT */
     height: 83%;
-    min-height: 500px;
+    min-height:500px;
     /* o tamanho do campo de input é menor que o do campo de output (de acordo com o layout fornecido) */
-    flex: 1.5;
+    max-width: 700px;
+    min-width: 600px;
     justify-content: space-between;
     margin-top: 100px;
-
 }
 
 .inputTexto {
     /* É O INPUT DO TEXTO PARA CODIFICAR OU DECODIFICAR!! */
-    max-width: 90%;
     height: 50%;
     font-size: 32px;
     background-color: var(--background);
@@ -79,7 +76,7 @@ header img {
 .botoes {
     /*CLASSE DOS BOTOES PRECISA SETAR FLEX PQ É A CLASSE PAI DOS DOIS BOTOES */
     display: flex;
-    width: 95%;
+
     gap: 10px;
     margin-top: 10px;
 }
@@ -107,23 +104,23 @@ header img {
 /*****  COMEÇO DA AREA DO OUTPUT ***/
 
 .outputSection {
-    flex: 1.1;
+    
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     flex-direction: column;
     margin-top: 40px;
     height: 95%;
     min-height: 300px;
     padding: 20px;
     background-color: white;
-    text-align: center;
     border-radius: 32px;
 
 }
 
 .outputSection img {
-    width: 200px;
+    width: 100%;
     height: auto;
 }
 
