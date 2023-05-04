@@ -69,9 +69,8 @@ header img {
     color: #495057;
 }
 
-.labelEBotoes {
-    /* ESSA CLASSE É A CLASSE QUE ENGLOBA O PARAGRAFO AVISANDO LETRA MINUSCULAS E OS BOTOES, até agora não precisa usar ela...*/
-
+.labelEBotoes p{
+    user-select: none;
 }
 
 .botoes {
@@ -88,10 +87,13 @@ header img {
     padding: 30px 15px 30px 15px;
     background-color: var(--dark-blue-400);
     color: white;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 500;
     border-radius: 25px;
     border: 1px solid var(--dark-blue-400);
+}
+.botoes button:hover{
+    cursor: pointer;
 }
 
 .botoes button:nth-child(2) {
@@ -131,15 +133,21 @@ header img {
 
 .output-btncopiar button {
     width: 50%;
-    padding: 10px 20px 10px 20px;
-    border-radius: 10px;
+    padding: 24px;
+    border-radius: 32px;
     visibility:hidden;
+    color: var(--dark-blue-300);
+    font-size: 16px;
+    border: 1px solid #0A3871 ;
+}
+
+.output-btncopiar button:hover {
+    cursor: pointer;
 }
 
 .output {
     width: 100%;
     text-align: center;
-    font-size: 16px;
     background-color: white;
     resize: none;
     border: none;
@@ -149,8 +157,11 @@ header img {
 /*****  FIM DA AREA DO OUTPUT ***/
 
 footer {
-    background-color: lightblue;
-    bottom: 0;
+    background-image: linear-gradient(90deg, blue, lightblue, blue);
+    text-align: center;
+}
+footer p:before{
+    content:"© ";
 }
 
 @media screen and (max-width:768px) {
