@@ -159,6 +159,9 @@ header img {
 footer {
     background-image: linear-gradient(90deg, blue, lightblue, blue);
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 footer p:before{
     content:"© ";
